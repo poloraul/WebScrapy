@@ -1,0 +1,395 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>英超数据库</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta name="format-detection" content="telephone=no"/>
+
+
+<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport" />
+<link rel="apple-touch-icon" href="//n.sinaimg.cn/sinacn/20170122/c4ab-fxzvcvf8831274.jpg" />
+<link href="//mjs.sinaimg.cn/wap/dpool/public/201402181140/css/common.min.css" type="text/css" rel="stylesheet">
+<link href="//mjs.sinaimg.cn/wap/dpool/public/201402181140/css/skin.css" type="text/css" rel="stylesheet">        <script type="text/javascript">
+        //公共全局配置文件
+        var globalConfig = {
+	        startTime	:	new Date().getTime(),	//页面开始渲染时间 ， 目前应用于：日志统计、性能统计。
+            isLogin     :   ''
+        }
+        </script><script src="//mjs.sinaimg.cn/umd/base-tools-SUDA/0.0.36/index.all.min.js"></script><link rel="shortcut icon" type="image/x-icon" href="https://mjs.sinaimg.cn/wap/module/base/img/favicon.ico" />
+<link rel="stylesheet" type="text/css" href="http://mjs.sinaimg.cn/wap/dpool/sports/footballDataBase/201402251740/css/football_data.min.css" />
+<header>
+    <div id="j_artcileMain" class="articleHead">
+        <div class="mainNav">
+            <a class="gIcon sinaLogo" href="http://sina.cn"></a>
+            <span class="navLine"></span>
+            <a href="http://sports.sina.cn" class="gIcon levelOne">新浪体育</a>
+                            <a href="http://sports.sina.cn/?sa=d33864t12v18" class="gIcon levelTwo">英超</a><a href="#" class="gIcon levelThree">数据库</a>
+            
+            <a href="http://news.sina.cn/?sa=t124d8889597v84&amp;ttp=n1211&amp;pos=108&amp;vt=4" class="gIcon navBtn">网站导航</a>
+        </div>
+    </div>
+</header>
+        <div class="articleHead">
+        <nav id="j_navGroup" class="navGroup">
+            <a style="width:33%" class="current" href="scoreboard?league_type_id=4&vt=4">英超</a>
+            <a style="width:33%"  class="" href="scoreboard?league_type_id=13&vt=4">西甲</a>
+            <a style="width:33%"  class="" href="scoreboard?league_type_id=3&vt=4">意甲</a>
+            <a style="width:33%"  class="" href="scoreboard?league_type_id=15&vt=4">德甲</a>
+            <a style="width:33%"  class="" href="scoreboard?league_type_id=16&vt=4">法甲</a>
+            <a style="width:33%"  class="" href="scoreboard?league_type_id=5&vt=4">欧冠</a>
+        </nav>
+    </div>
+    
+<div class="navbox_three">
+	<a href="scoreboard?league_type_id=4"><span>积分榜</span></a><a href="shooterboard?league_type_id=4">射手榜</a><a href="schedule?league_type_id=4">赛程赛果</a></div>
+
+    <!--标题栏-->
+    <!-- <div class="data_nav bdt0">
+        <div class='data_nav_cont'>
+            <span class='js_btn_fold btn_more'>更多<em></em></span>
+            <span>积分</span>
+            <span class='fs12'></span>
+        </div>
+    </div> -->
+    <div class="data_nav_second js_fold_div" >
+        <ul>
+                                                <li><a class='selected' href="scoreboard?league=&item=2&team_player=2&league_type_id=4&vt=4">积分</a></li>
+                
+                <li><a class='' href="teamdatarank?league=&item=1&team_player=2&league_type_id=4&vt=4" class='selected'>射门</a></li>
+                <li><a class='' href="teamdatarank?league=&item=13&team_player=2&league_type_id=4&vt=4">进球</a></li>
+                <li><a class='' href="teamdatarank?league=&item=3&team_player=2&league_type_id=4&vt=4">传球</a></li>
+                <li><a class='' href="teamdatarank?league=&item=5&team_player=2&league_type_id=4&vt=4">传中</a></li>
+                <li><a class='' href="teamdatarank?league=&item=7&team_player=2&league_type_id=4&vt=4">抢断</a></li>
+                <li><a class='' href="teamdatarank?league=&item=8&team_player=2&league_type_id=4&vt=4">犯规</a></li>
+                <li><a class='' href="teamdatarank?league=&item=11&team_player=2&league_type_id=4&vt=4">红黄牌</a></li>
+                <li><a class='' href="teamdatarank?league=&item=4&team_player=2&league_type_id=4&vt=4">传威胁球</a></li>
+                <li><a class='' href="teamdatarank?league=&item=14&team_player=2&league_type_id=4&vt=4">失球</a></li>
+                <li><a class='' href="teamdatarank?league=&item=15&team_player=2&league_type_id=4&vt=4">被射门</a></li>
+                <li><a class='' href="teamdatarank?league=&item=16&team_player=2&league_type_id=4&vt=4">任意球</a></li>
+                <li><a class='' href="teamdatarank?league=&item=17&team_player=2&league_type_id=4&vt=4">越位</a></li>
+                <li><a class='' href="teamdatarank?league=&item=18&team_player=2&league_type_id=4&vt=4">控球率</a></li>
+                <li><a class='' href="teamdatarank?league=&item=19&team_player=2&league_type_id=4&vt=4">中门柱</a></li>
+                <li><a class='' href="teamdatarank?league=&item=20&team_player=2&league_type_id=4&vt=4">角球</a></li>
+                <li><a class='' href="teamdatarank?league=&item=21&team_player=2&league_type_id=4&vt=4">界外球</a></li>
+                    </ul>
+    </div>
+<!--白色数据容器-->
+<div class="data_wrap">
+    <ul class="data_topmate">
+
+        <li>
+            <p class="w_10">名次</p>
+            <p class="w_40 text_l"><span>球队</span></p>
+            <p class="w_10">赛</p>
+            <p class="w_10">胜</p>
+            <p class="w_10">平</p>
+            <p class="w_10">负</p>
+            <p class="w_10">积分</p>
+        </li>
+
+                    <li>
+                <p class="w_10"><span class="top_num rednum">1</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=14&amp;league_type_id=4"><span>利物浦</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">4</p>
+                <p class="w_10">0</p>
+                <p class="w_10">0</p>
+                <p class="w_10">12</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num yellownum">2</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=8&amp;league_type_id=4"><span>切尔西</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">4</p>
+                <p class="w_10">0</p>
+                <p class="w_10">0</p>
+                <p class="w_10">12</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num greynum">3</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=43&amp;league_type_id=4"><span>曼城</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">3</p>
+                <p class="w_10">1</p>
+                <p class="w_10">0</p>
+                <p class="w_10">10</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">4</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=6&amp;league_type_id=4"><span>热刺</span></a></p>
+                <p class="w_10">3</p>
+                <p class="w_10">3</p>
+                <p class="w_10">0</p>
+                <p class="w_10">0</p>
+                <p class="w_10">9</p>
+            </li>
+                                                                        <li class="lev_up">欧冠直通资格<em>up</em><p></p></li>
+                                            
+                    <li>
+                <p class="w_10"><span class="top_num ">5</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=57&amp;league_type_id=4"><span>沃特福德</span></a></p>
+                <p class="w_10">3</p>
+                <p class="w_10">3</p>
+                <p class="w_10">0</p>
+                <p class="w_10">0</p>
+                <p class="w_10">9</p>
+            </li>
+                                                                        <li class="lev_up">欧联杯资格<em>up</em><p></p></li>
+                                            
+                    <li>
+                <p class="w_10"><span class="top_num ">6</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=91&amp;league_type_id=4"><span>伯恩茅斯</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">2</p>
+                <p class="w_10">1</p>
+                <p class="w_10">1</p>
+                <p class="w_10">7</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">7</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=11&amp;league_type_id=4"><span>埃弗顿</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">1</p>
+                <p class="w_10">3</p>
+                <p class="w_10">0</p>
+                <p class="w_10">6</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">8</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=13&amp;league_type_id=4"><span>莱斯特城</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">2</p>
+                <p class="w_10">0</p>
+                <p class="w_10">2</p>
+                <p class="w_10">6</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">9</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=39&amp;league_type_id=4"><span>狼队</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">1</p>
+                <p class="w_10">2</p>
+                <p class="w_10">1</p>
+                <p class="w_10">5</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">10</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=20&amp;league_type_id=4"><span>南安普敦</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">1</p>
+                <p class="w_10">1</p>
+                <p class="w_10">2</p>
+                <p class="w_10">4</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">11</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=54&amp;league_type_id=4"><span>富勒姆</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">1</p>
+                <p class="w_10">1</p>
+                <p class="w_10">2</p>
+                <p class="w_10">4</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">12</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=36&amp;league_type_id=4"><span>布莱顿</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">1</p>
+                <p class="w_10">1</p>
+                <p class="w_10">2</p>
+                <p class="w_10">4</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">13</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=3&amp;league_type_id=4"><span>阿森纳</span></a></p>
+                <p class="w_10">3</p>
+                <p class="w_10">1</p>
+                <p class="w_10">0</p>
+                <p class="w_10">2</p>
+                <p class="w_10">3</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">14</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=1&amp;league_type_id=4"><span>曼联</span></a></p>
+                <p class="w_10">3</p>
+                <p class="w_10">1</p>
+                <p class="w_10">0</p>
+                <p class="w_10">2</p>
+                <p class="w_10">3</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">15</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=31&amp;league_type_id=4"><span>水晶宫</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">1</p>
+                <p class="w_10">0</p>
+                <p class="w_10">3</p>
+                <p class="w_10">3</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">16</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=97&amp;league_type_id=4"><span>卡迪夫城</span></a></p>
+                <p class="w_10">3</p>
+                <p class="w_10">0</p>
+                <p class="w_10">2</p>
+                <p class="w_10">1</p>
+                <p class="w_10">2</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">17</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=38&amp;league_type_id=4"><span>哈德斯菲尔德</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">0</p>
+                <p class="w_10">2</p>
+                <p class="w_10">2</p>
+                <p class="w_10">2</p>
+            </li>
+                                                                        <li class="lev_down">降级区<em>up</em></li>
+                                            
+                    <li>
+                <p class="w_10"><span class="top_num ">18</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=4&amp;league_type_id=4"><span>纽卡斯尔</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">0</p>
+                <p class="w_10">1</p>
+                <p class="w_10">3</p>
+                <p class="w_10">1</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">19</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=90&amp;league_type_id=4"><span>伯恩利</span></a></p>
+                <p class="w_10">3</p>
+                <p class="w_10">0</p>
+                <p class="w_10">1</p>
+                <p class="w_10">2</p>
+                <p class="w_10">1</p>
+            </li>
+                                                                        
+                    <li>
+                <p class="w_10"><span class="top_num ">20</span></p>
+                <p class="w_40 text_l"><a href="http://sports1.sina.cn/global/teaminfo?team_id=21&amp;league_type_id=4"><span>西汉姆联</span></a></p>
+                <p class="w_10">4</p>
+                <p class="w_10">0</p>
+                <p class="w_10">0</p>
+                <p class="w_10">4</p>
+                <p class="w_10">0</p>
+            </li>
+                                                                        
+            </ul>
+</div>
+<!--标题栏-->
+<div class="data_nav">
+    <div class='data_nav_cont'>
+        <span>历届积分榜</span>
+    </div>
+</div>
+<!--白色数据容器-->
+<form action="scoreboard?league_type_id=4&vt=4" method="post">
+    <div class="data_wrap">
+        <p class="select_div j_simselect">
+            <span id="estimateShow">请选择</span>
+            <select id="estimate" class="j_simselect" name="year_to_year">
+                <option value="">请选择</option>
+                                    <option value="2011-2012" >2011-2012</option>
+                                    <option value="2012-2013" >2012-2013</option>
+                                    <option value="2013-2014" >2013-2014</option>
+                                    <option value="2014-2015" >2014-2015</option>
+                                    <option value="2015-2016" >2015-2016</option>
+                                    <option value="2016-2017" >2016-2017</option>
+                                    <option value="2017-2018" >2017-2018</option>
+                                    <option value="2018-2019" selected="selected">2018-2019</option>
+                            </select>
+        </p>
+        <p class='submit_div'>
+            <input type='submit' value='查询'>
+        </p>
+    </div>
+</form>
+
+        <!--底部导航-->
+        <div class="data_bottomnav">
+            <a href="teamlist?league_type_id=4&vt=4">球队资料</a>
+            <a href="searchplayer?league_type_id=4&vt=4">球员资料</a>
+            <a href="http://dp.sina.cn/dpool/sports/score/?vt=4">比分直播</a>
+        </div>
+        <!--面包削-->
+<div class="data_Trail">
+    <a href="http://sports.sina.cn">新浪体育</a>><a href="?league_type_id=4">英超数据库</a>><span>球队数据</span>
+</div>
+	<!-- footer -->
+	<footer id="j_wFooter"  style="visibility:visible" >
+		<!--栏目公共页尾-->
+		<!--<div class="footer">
+			<span class="j_backHistory gIcon backPrevPage" data-sudaclick="backPrevPage"></span>
+			<span class="j_backTop gIcon backTop" data-sudaclick="backTop"></span>
+
+			<a href="https://sina.cn/?from=page" class="linkico" data-sudaclick="sina_home">手机新浪网</a><a href="http://news.sina.cn/?sa=t124d8889597v84" class="linkico" data-sudaclick="sina_guide">导航</a><a href="http://site.proc.sina.cn/search/index.php" class="linkico" data-sudaclick="searchlink">搜索</a>
+		</div>-->
+		<div class="footer">
+			<!--页尾跳链-->
+			<div class="footer_nav">
+				<span class="j_backPrePage backPrevPage"></span>
+				<span class="j_scrollToTop backTop"></span>
+				<a href="https://sina.cn/?from=page" class="linkico" data-sudaclick="sina_home">首页</a><a href="http://news.sina.cn/?sa=t124d8889597v84" class="linkico" data-sudaclick="sina_guide">导航</a><a class="linkico" href="http://dp.sina.cn/dpool/messagev2/index.php?boardid=109" data-sudaclick="sina_messagev2">反馈</a><a class="linkico" href="http://passport.sina.cn/signin/signin?entry=wapsso&vt=4&backTitle=%E6%89%8B%E6%9C%BA%E6%96%B0%E6%B5%AA%E7%BD%91&amp;r=http%3A%2F%2Fsports1.sina.cn%2Fglobal%2Fscoreboard%3Fleague_type_id%3D4%26vt%3D4&amp;revalid=1">登录</a>
+			</div>
+			<p class="footer_times">
+				Sina.cn<span class="footer_t_ico">09-02 20:06</span>
+			</p>
+		</div>
+		<!--栏目公共页尾结束-->
+	</footer>
+	<!-- /footer -->
+					<script src="//mjs.sinaimg.cn/wap/module/base/js/zepto.min.js"></script><script src="//mjs.sinaimg.cn/wap/dpool/public/201402181140/js/header.footer.min.js"></script><script type="text/javascript">
+    function simInit(){
+        $('.j_simselect').each(function(){
+            var that = $(this),
+                val = that.val(),
+                text = that.find('option[value="'+val+'"]').text(),
+                oShow = $(this).prev(),
+                showText = oShow.text();
+            oShow.html((text&&text.length>0)?text:val);
+        })
+    };
+    (function(){
+        /*自定义下拉菜单*/
+        function simSelectBind(){
+            $('.j_simselect').each(function(){
+                $(this).on('change',function(){
+                    var that = $(this),
+                        val = that.val(),
+                        text = that.find('option[value="'+val+'"]').text(),
+                        oShow = $(this).prev(),
+                        showText = oShow.text();
+                    oShow.html((text&&text.length>0)?text:val);
+                })
+            })
+        }
+        $('.js_btn_fold').on('click',function(){
+            $(this).find('em').toggleClass('btn_unfold');
+            $('.js_fold_div').toggle();
+        })
+        /**
+         * 绑定事件
+         */
+        setTimeout(function(){
+            simSelectBind();//自定义下拉菜单
+            simInit();
+        }, 300);
+    })()
+</script>
